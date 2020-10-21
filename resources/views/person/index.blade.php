@@ -7,10 +7,15 @@
 
 @section('content')
 <table>
- <tr><th>id</th><th>name</th><th>mail</th><th>age</th></tr>
+ <tr><th>person</th><th>board</th></tr>
  @foreach ($items as $item)
  	<tr>
 		<td>{{$item->getData()}}</td>
+		@if( $item->board != null)
+		@foreach($item->board as $obj)
+		<td>{{$obj->getData()}}</td>
+		@endforeach
+		@endif
  	</tr>
  @endforeach
 </table>

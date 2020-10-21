@@ -27,3 +27,6 @@ Route::get('hello/show', 'HelloController@show');
 Route::get('person','PersonController@index');
 Route::get('person/find','PersonController@find');
 Route::post('person/find','PersonController@serch');
+Route::get('board','BoardController@index');
+Route::get('board/add','BoardController@add');
+Route::post('board/add','BoardController@create');

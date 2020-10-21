@@ -32,4 +32,8 @@ class Person extends Model {
 //		});
 	}
 
+	public function board(){
+		return $this->hasMany('App\Board');
+	}
+
 }
